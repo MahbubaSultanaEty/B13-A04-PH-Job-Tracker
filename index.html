@@ -46,6 +46,182 @@
     <hr class="mt-2 text-gray-400 pt-8 w-[80%] mx-auto">
     
 
+    <main class="py-6 w-[80%] mx-auto">
+        <div class="flex justify-between mb-4">
+            <h2 id="card-title" class=" text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Available Jobs</h2>
+            <div class="text-sm sm:text-base md:text-lg">
+                jobs count
+            </div>
+        </div>
+        <!-- main-buttons -->
+         <div class="space-x-2">
+            <button id="all-filter-btn" onclick="toggleBtn('all-filter-btn')" class="btn bg-blue-950 text-white min-w-[100px]">All</button>
+            <button id="interview-filter-btn" onclick="toggleBtn('interview-filter-btn')" class="btn bg-white ">Interview</button>
+            <button id="rejected-filter-btn" onclick="toggleBtn('rejected-filter-btn')" class="btn bg-white">Rejected</button>
+         </div>
+        <section id="all-card" class="my-6 space-y-6">
+            <!-- card-01 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">Mobile First Corp</h5>
+                <p class="position text-base md:text-lg">React Native Developer</p>
+                <p class="salary  text-xs md:text-sm my-4">Remote • Full-time • $130,000 - $175,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                 <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-02 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">TechWave Solutions</h5>
+                <p class="position text-base md:text-lg">Frontend Developer</p>
+                <p class="salary  text-xs md:text-sm my-4">Remote • Full-time • $120,000 - $145,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Develop responsive web applications using React and Tailwind CSS. Collaborate with designers to implement user-friendly interfaces.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                    <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-03 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">Skyline Innovations</h5>
+                <p class="position text-base md:text-lg">Backend Engineer</p>
+                <p class="salary  text-xs md:text-sm my-4">On-site • Full-time • $110,000 - $140,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Design and maintain scalable server-side applications using Node.js and Express. Optimize database queries and APIs.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                </div>
+                    <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-04 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">GreenByte Labs</h5>
+                <p class="position text-base md:text-lg">Full Stack Developer</p>
+                <p class="salary  text-xs md:text-sm my-4">Hybrid • Full-time • $125,000 - $150,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Build and maintain full-stack applications using React and Django. Work closely with cross-functional teams to deliver features.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                  <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-05 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">NextGen Tech</h5>
+                <p class="position text-base md:text-lg">Mobile App Developer</p>
+                <p class="salary  text-xs md:text-sm my-4">Remote • Contract • $90,000 - $115,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Create cross-platform mobile apps using Flutter. Implement modern UI components and integrate with REST APIs.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                   <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-06 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">CloudCore Systems</h5>
+                <p class="position text-base md:text-lg">DevOps Engineer</p>
+                <p class="salary  text-xs md:text-sm my-4">On-site • Full-time • $130,000 - $160,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Manage cloud infrastructure on AWS. Automate CI/CD pipelines and monitor system performance.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                 <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-07 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">BlueSky Digital</h5>
+                <p class="position text-base md:text-lg">UI/UX Designer</p>
+                <p class="salary  text-xs md:text-sm my-4">Hybrid • Part-time • $70,000 - $95,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Design engaging interfaces and user experiences. Work on wireframes, prototypes, and collaborate with developers.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+            <!-- card-08 -->
+             <div class="card-div p-4 md:p-8 bg-white flex justify-between">
+                <div>
+                <h5 class="company-name text-lg md:text-2xl font-bold">Quantum Leap Tech</h5>
+                <p class="position text-base md:text-lg">Data Scientist</p>
+                <p class="salary  text-xs md:text-sm my-4">Remote • Full-time • $140,000 - $175,000</p>
+                <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
+                <p class="job-description text-sm md:text-base my-3">Analyze large datasets to extract insights. Build machine learning models and present results to stakeholders.</p>
+                <!-- button -->
+                 <div class="space-x-4 mt-4">
+                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                 </div>
+                 </div>
+                 <div class="delete-button">
+                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                     <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+             </div>
+        </section>
+    </main>
 
     <script src="./script.js"></script>
 </body>
