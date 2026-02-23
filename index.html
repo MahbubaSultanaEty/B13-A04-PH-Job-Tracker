@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
+
+    <!-- daisy ui and tailwind connect -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        font-family: "Geist", sans-serif;
+    }
+</style>
+
 </head>
-<body>
+<body class="bg-gray-50">
+    <!-- header section -->
+    <header class="py-8  w-[80%] mx-auto">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-950 ">Job Application Tracker</h1>
+        <div class="grid grid-cols-2 lg:grid-cols-3 justify-between mt-6 gap-4">
+            <div class="total bg-white p-4 shadow-2xs">
+                <p class="text-base sm:text-lg md:text-xl">Total</p>
+                <p id="total-count" class="text-blue-950 text-2xl md:text-4xl font-bold">0</p>
+            </div>
+            <div class="interview bg-white p-4 shadow-2xs">
+                <p class="text-base sm:text-lg md:text-xl">Interview</p>
+                <p id="interview-count" class="text-green-700 text-2xl md:text-4xl font-bold">0</p>
+            </div>
+            <div class="rejected bg-white p-4 shadow-2xs">
+                <p class="text-base sm:text-lg md:text-xl">Rejected</p>
+                <p id="rejected-count" class="text-red-800 text-2xl md:text-4xl font-bold">0</p>
+            </div>
+        </div>
+    </header>
+    <hr class="mt-2 text-gray-400 pt-8 w-[80%] mx-auto">
     
+
 
     <script src="./script.js"></script>
 </body>
