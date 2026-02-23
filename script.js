@@ -36,3 +36,28 @@ function toggleBtn(id) {
 
 const mainContainer = document.querySelector("main");
 
+mainContainer.addEventListener("click", function (event) {
+    
+    const parentNode = event.target.parentNode.parentNode;
+    console.log(parentNode);
+    const companyName = parentNode.querySelector(".company-name").innerText;
+    const position = parentNode.querySelector(".position").innerText;
+    const salary = parentNode.querySelector(".salary").innerText;
+    const currentStatus = parentNode.querySelector(".current-position").innerText;
+    const jobDesciption = parentNode.querySelector(".job-description").innerText;
+   
+    if (event.target.classList.contains("interview-btn")) {
+        const cardInfo = {
+            companyName,
+            position,
+            currentStatus: "Interview",
+            salary,
+            jobDesciption
+        }
+
+        parentNode.querySelector(".current-position").innerText= "Interview"
+        const companyExist = interviewList.find(item => item.companyName == cardInfo.companyName);
+        if(companyExist){}
+    }
+
+})
