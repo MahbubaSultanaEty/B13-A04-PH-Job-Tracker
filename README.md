@@ -22,8 +22,12 @@ step 05: add innerHTML to that newly created element.
 step 06: insert this new element in the empty section or div using appendChild() method.
 
 
-
 ### 3. What is Event Bubbling? And how does it work?
+
+## Ans:
+Event bubbling is a proccess in the DOM where an event on a child element "bubbles up" to its parents up to (document).
+Event occurs on child Element. Event bubbles up to its parent to grandparent up to document. Its useful beacause instead of attaching event listener to every child, you can attach it to a common parent.
+
 
 ### 4. What is Event Delegation in JavaScript? Why is it useful?
 

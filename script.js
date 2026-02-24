@@ -211,11 +211,7 @@ function renderInterview() {
                     <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
-                 <div class="delete-button">
-                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
-                     <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </div>
+                 
              </div>
         `
         filteredSection.appendChild(div);
@@ -242,11 +238,7 @@ function renderRejected() {
                     <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
-                 <div class="delete-button ">
-                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
-                     <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </div>
+
              </div>
         `
         filteredSection.appendChild(div);
