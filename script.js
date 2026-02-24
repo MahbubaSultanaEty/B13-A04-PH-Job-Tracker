@@ -42,24 +42,18 @@ let currentId = "all";
 
 // interview count div
 let interviewCountDiv = document.getElementById("interviewCountDiv")
-// interviewCountDiv.innerHTML = "";
-// // const interviewDiv = document.createElement("Div"); 
-// // interviewDiv.innerHTML = `
-// //         <p>${interviewListLentgh.innerText} out of ${allCard.children.length} jobs </p>
-// //         `
-// // interviewCountDiv.appendChild(interviewDiv);
 interviewCountDiv.classList.add("hidden");   
 
-// // rejected count div
-// let rejectedCountDiv = document.getElementById("rejectedCountDiv");
-
-// rejectedCount.innerHTML = "";
-// const rejectedDiv = document.createElement("Div"); 
-// rejectedDiv.innerHTML = `
-//         <p>${rejectedList.length} out of ${allCard.children.length} jobs </p>
-//         `
-// rejectedCountDiv.appendChild(rejectedDiv);
+let rejectedCountDiv= document.getElementById("rejectedCountDiv")
 rejectedCountDiv.classList.add("hidden");
+
+const defaultView = document.getElementById("defaul-view");
+
+function checkDefautlt() {
+    if (allCard.children.length <= 0) {
+        defaultView.classList.remove("hidden");
+    }
+}
 
 function toggleBtn(id) {
      allFilterBtn.classList.remove("bg-blue-950", "text-white")
@@ -74,8 +68,6 @@ function toggleBtn(id) {
     selected.classList.add("bg-blue-950", "text-white");
     selected.classList.remove("bg-white", "text-black");
 
-
-
     currentId = id;
     if (id == "interview-filter-btn") {
         allCard.classList.add("hidden");
@@ -86,13 +78,18 @@ function toggleBtn(id) {
         allCardCount.classList.add("hidden");
         rejectedCountDiv.classList.add("hidden");
 
+        if (interviewList.length <= 0) {
+            defaultView.classList.remove("hidden");
+            }
+
     } else if (id == "all-filter-btn") {
         allCard.classList.remove("hidden");
         filteredSection.classList.add("hidden");
 
         rejectedCountDiv.classList.add("hidden") 
         interviewCountDiv.classList.add("hidden");
-        allCardCount.classList.remove("hidden")
+        allCardCount.classList.remove("hidden");
+
     } else if(id == "rejected-filter-btn"){
          allCard.classList.add("hidden");
         filteredSection.classList.remove("hidden");
@@ -101,6 +98,10 @@ function toggleBtn(id) {
         rejectedCountDiv.classList.remove("hidden");
         allCardCount.classList.add("hidden");
         interviewCountDiv.classList.add("hidden");
+
+         if (interviewList.length <= 0) {
+            defaultView.classList.remove("hidden");
+            }
          }
 
 }
@@ -109,6 +110,10 @@ const mainContainer = document.querySelector("main");
 
 mainContainer.addEventListener("click", function (event) {
     
+    if (event.target.classList.contains("delete-btn")) {
+        const card = event.target.parentNode.parentNode;
+        card.remove();
+     }
     const parentNode = event.target.parentNode.parentNode;
     console.log(parentNode);
     const companyName = parentNode.querySelector(".company-name").innerText;
@@ -116,8 +121,9 @@ mainContainer.addEventListener("click", function (event) {
     const salary = parentNode.querySelector(".salary").innerText;
     const currentStatus = parentNode.querySelector(".current-position").innerText;
     const jobDesciption = parentNode.querySelector(".job-description").innerText;
-    console.log(companyName,position, salary, currentStatus, jobDesciption);
-   
+    console.log(companyName, position, salary, currentStatus, jobDesciption);
+
+    
     if (event.target.classList.contains("interview-btn")) {
         const cardInfo = {
             companyName,
@@ -137,6 +143,7 @@ mainContainer.addEventListener("click", function (event) {
         if (!companyExist) {
             interviewList.push(cardInfo);
         }
+
         rejectedList = rejectedList.filter(item => item.companyName != cardInfo.companyName)
         
         if (currentId == "rejected-filter-btn") {
@@ -169,7 +176,7 @@ mainContainer.addEventListener("click", function (event) {
         }
         calculateCount()
     } 
-
+    calculateCount()
 })
 
 const filteredSection = document.getElementById("filtered-section");
