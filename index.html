@@ -49,12 +49,22 @@
     <main class="py-6 w-[80%] mx-auto">
         <div class="flex justify-between mb-4">
             <h2 id="card-title" class=" text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Available Jobs</h2>
-            <div class="text-sm sm:text-base md:text-lg">
-                jobs count
+
+            <div id="count-div" class="text-sm sm:text-base md:text-lg">
+               <div>
+            <p id="allCardCount">Total <span id="total-count-in-p">0</span> Jobs </p>
+               </div>
+   
+               <div id="interviewCountDiv">
+                  <p > <span id="interview-count-in-p"></span> out of <span id="total-count-d-in-interview">0</span> Jobs </p></div>
+               <div id="rejectedCountDiv">
+                <p > <span id="rejected-count-in-p"></span> out of <span id="total-count-p-in-rejected">0</span> Jobs </p></div>
+               </div>
+
             </div>
         </div>
         <!-- main-buttons -->
-         <div class="space-x-2">
+         <div class="flex gap-4">
             <button id="all-filter-btn" onclick="toggleBtn('all-filter-btn')" class="btn bg-blue-950 text-white min-w-[100px]">All</button>
             <button id="interview-filter-btn" onclick="toggleBtn('interview-filter-btn')" class="btn bg-white ">Interview</button>
             <button id="rejected-filter-btn" onclick="toggleBtn('rejected-filter-btn')" class="btn bg-white">Rejected</button>
@@ -62,7 +72,7 @@
 
          <!-- filtered-section -->
           <section id="filtered-section">
-            
+
           </section>
 
 
@@ -76,7 +86,7 @@
                 <p class="current-position bg-blue-50 text-blue-950 font-semibold max-w-[120px] text-center p-1">Not Applied</p>
                 <p class="job-description text-sm md:text-base my-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <!-- button -->
-                 <div class="space-x-4 mt-4">
+                 <div class="space-x-4 mt-4 ">
                     <button id="interview-btn" class="interview-btn    btn btn-outline btn-success ">Interview</button>
                     <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
