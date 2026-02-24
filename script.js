@@ -49,11 +49,6 @@ rejectedCountDiv.classList.add("hidden");
 
 const defaultView = document.getElementById("defaul-view");
 
-function checkDefautlt() {
-    if (allCard.children.length <= 0) {
-        defaultView.classList.remove("hidden");
-    }
-}
 
 function toggleBtn(id) {
      allFilterBtn.classList.remove("bg-blue-950", "text-white")
@@ -68,6 +63,9 @@ function toggleBtn(id) {
     selected.classList.add("bg-blue-950", "text-white");
     selected.classList.remove("bg-white", "text-black");
 
+
+    defaultView.classList.remove("hidden");
+
     currentId = id;
     if (id == "interview-filter-btn") {
         allCard.classList.add("hidden");
@@ -78,9 +76,11 @@ function toggleBtn(id) {
         allCardCount.classList.add("hidden");
         rejectedCountDiv.classList.add("hidden");
 
-        if (interviewList.length <= 0) {
+          if (interviewList.length < 1) {
             defaultView.classList.remove("hidden");
-            }
+        } else {
+            defaultView.classList.add("hidden");
+     }
 
     } else if (id == "all-filter-btn") {
         allCard.classList.remove("hidden");
@@ -89,6 +89,12 @@ function toggleBtn(id) {
         rejectedCountDiv.classList.add("hidden") 
         interviewCountDiv.classList.add("hidden");
         allCardCount.classList.remove("hidden");
+
+        if (allCard.children.length >1) {
+        defaultView.classList.add("hidden");
+    } else {
+        defaultView.classList.remove("hidden");
+    }
 
     } else if(id == "rejected-filter-btn"){
          allCard.classList.add("hidden");
@@ -99,10 +105,13 @@ function toggleBtn(id) {
         allCardCount.classList.add("hidden");
         interviewCountDiv.classList.add("hidden");
 
-         if (interviewList.length <= 0) {
-            defaultView.classList.remove("hidden");
-            }
-         }
+         if (interviewList.length <= 0 ) {
+            defaultView.classList.add("hidden");
+            }else if(interviewList.length > 0 && interviewList < 1){
+        defaultView.classList.remove("hidden");
+        }
+
+    } 
 
 }
 
@@ -245,3 +254,12 @@ function renderRejected() {
 }
 
 
+function checkDefautlt() {
+    if (allCard.children.length < 1) {
+        defaultView.classList.remove("hidden");
+    } else {
+        defaultView.classList.add("hidden");
+    }
+
+}
+checkDefautlt()
