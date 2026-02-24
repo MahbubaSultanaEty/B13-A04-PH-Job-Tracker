@@ -24,7 +24,7 @@
 </style>
 
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100">
     <!-- header section -->
     <header class="py-8  w-[80%] mx-auto">
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-950 ">Job Application Tracker</h1>
@@ -59,6 +59,13 @@
             <button id="interview-filter-btn" onclick="toggleBtn('interview-filter-btn')" class="btn bg-white ">Interview</button>
             <button id="rejected-filter-btn" onclick="toggleBtn('rejected-filter-btn')" class="btn bg-white">Rejected</button>
          </div>
+
+         <!-- filtered-section -->
+          <section id="filtered-section">
+            
+          </section>
+
+
         <section id="all-card" class="my-6 space-y-6">
             <!-- card-01 -->
              <div class="card-div p-4 md:p-8 bg-white flex justify-between">
@@ -70,8 +77,8 @@
                 <p class="job-description text-sm md:text-base my-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn    btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                  <div class="delete-button">
@@ -90,8 +97,8 @@
                 <p class="job-description text-sm md:text-base my-3">Develop responsive web applications using React and Tailwind CSS. Collaborate with designers to implement user-friendly interfaces.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                     <div class="delete-button">
@@ -110,8 +117,8 @@
                 <p class="job-description text-sm md:text-base my-3">Design and maintain scalable server-side applications using Node.js and Express. Optimize database queries and APIs.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                 </div>
                     <div class="delete-button">
@@ -130,8 +137,8 @@
                 <p class="job-description text-sm md:text-base my-3">Build and maintain full-stack applications using React and Django. Work closely with cross-functional teams to deliver features.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                   <div class="delete-button">
@@ -150,8 +157,8 @@
                 <p class="job-description text-sm md:text-base my-3">Create cross-platform mobile apps using Flutter. Implement modern UI components and integrate with REST APIs.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                    <div class="delete-button">
@@ -170,8 +177,8 @@
                 <p class="job-description text-sm md:text-base my-3">Manage cloud infrastructure on AWS. Automate CI/CD pipelines and monitor system performance.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                  <div class="delete-button">
@@ -190,12 +197,12 @@
                 <p class="job-description text-sm md:text-base my-3">Design engaging interfaces and user experiences. Work on wireframes, prototypes, and collaborate with developers.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                 <div class="delete-button">
-                   <button id="delete-btn" class="btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
+                   <button id="delete-btn" class=" btn btn-ghost btn-sm text-neutral-500 hover:bg-red-100">
                      <i class="fa-solid fa-trash"></i>
                     </button>
                   </div>
@@ -210,8 +217,8 @@
                 <p class="job-description text-sm md:text-base my-3">Analyze large datasets to extract insights. Build machine learning models and present results to stakeholders.</p>
                 <!-- button -->
                  <div class="space-x-4 mt-4">
-                    <button id="interview-btn" class="btn btn-outline btn-success ">Interview</button>
-                    <button id="rejected-btn" class="btn btn-outline btn-error ">Rejected</button>
+                    <button id="interview-btn" class="interview-btn   btn btn-outline btn-success ">Interview</button>
+                    <button id="rejected-btn" class="rejected-btn  btn btn-outline btn-error ">Rejected</button>
                  </div>
                  </div>
                  <div class="delete-button">
