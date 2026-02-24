@@ -104,11 +104,11 @@ function toggleBtn(id) {
         rejectedCountDiv.classList.remove("hidden");
         allCardCount.classList.add("hidden");
         interviewCountDiv.classList.add("hidden");
-
-         if (interviewList.length <= 0 ) {
-            defaultView.classList.add("hidden");
-            }else if(interviewList.length > 0 && interviewList < 1){
-        defaultView.classList.remove("hidden");
+        
+         if (rejectedList.length <= 0 && interviewList < 1) {
+            defaultView.classList.remove("hidden");
+            }else if(rejectedList.length > 0 ){
+        defaultView.classList.add("hidden");
         }
 
     } 
@@ -260,6 +260,6 @@ function checkDefautlt() {
     } else {
         defaultView.classList.add("hidden");
     }
-
+    
 }
 checkDefautlt()
